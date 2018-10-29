@@ -6,10 +6,10 @@ class HotelName extends PolymerElement {
       <style>
         :host {
           display: block;
-          font-size: 3.5vw;
+          /*font-size: 3.5vw;*/
         }
       </style>
-      <div>
+      <div style$="font-size: [[fontSize]];">
         [[name]]
       </div>
     `;
@@ -18,8 +18,19 @@ class HotelName extends PolymerElement {
     return {
       name: {
         type: String,
+      },
+      fontSize: {
+        type: String,
+        computed: '_computedFontSize(name)'
       }
     };
+  }
+
+  _computedFontSize(name) {
+    if (name.length > 44) {
+      return '2.75vw';
+    }
+    return '3.5vw';
   }
 }
 

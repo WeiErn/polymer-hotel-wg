@@ -31,8 +31,7 @@ class HotelEl extends PolymerElement {
         img {
           position: absolute;
           top: 0; bottom: 0; left: 0; right: 0;
-          max-width: 100%;
-          max-height: 100%;
+          width: 100%;
         }
         .info {
           display: inline-block;
@@ -47,7 +46,7 @@ class HotelEl extends PolymerElement {
           box-sizing: border-box;
         }
         .upper .row:nth-of-type(2) {
-          padding: 0.5vw 0 0.8vw 0;
+          padding: 0.6vw 0 0.6vw 0;
         }
       </style>
       <div class="clearfix">

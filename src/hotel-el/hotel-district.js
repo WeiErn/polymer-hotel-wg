@@ -17,7 +17,7 @@ class HotelDistrict extends PolymerElement {
           /*vertical*/
         }
         p {
-          margin: 0 0;
+          margin: 0.1vw 0 0;
         }
       </style>
       <p>[[district]]</p>
