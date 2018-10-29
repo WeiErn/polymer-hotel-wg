@@ -20,10 +20,19 @@ class HotelEl extends PolymerElement {
           clear: both;
           display: table;
         }
-        img {
+        .img-wrapper {
           float: left;
           width: 25%;
           height: auto;
+          
+          padding-bottom: 25%;
+          position: relative;
+        }
+        img {
+          position: absolute;
+          top: 0; bottom: 0; left: 0; right: 0;
+          max-width: 100%;
+          max-height: 100%;
         }
         .info {
           display: inline-block;
@@ -42,7 +51,9 @@ class HotelEl extends PolymerElement {
         }
       </style>
       <div class="clearfix">
-        <img src="[[properties.image]]" alt="Hotel Room">
+        <div class="img-wrapper">
+          <img src="[[properties.image]]" alt="Hotel Room" onError="this.onerror=null;this.src='../../images/wego.jpg';" />
+        </div>
         <div class="info">
           <div class="upper">
             <div class="row">
